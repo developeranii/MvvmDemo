@@ -17,7 +17,6 @@ struct LoginResource
 
             let loginPostBody = try JSONEncoder().encode(loginRequest)
             HttpUtility().postApiData(requestUrl: loginUrl, requestBody: loginPostBody, resultType: LoginResponse.self) { loginApiResponse in
-
                 completion(loginApiResponse)
             }
         }

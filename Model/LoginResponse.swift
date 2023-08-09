@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct LoginResponse : Decodable {
+struct LoginResponse : Codable {
 
     let errorMessage: String?
     let data: LoginResponseData?
 }
 
-struct LoginResponseData : Decodable {
+struct LoginResponseData : Codable {
     let userName: String
     let userID: Int
     let email: String
