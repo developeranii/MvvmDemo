@@ -26,14 +26,8 @@ class LoginVC: UIViewController{
                 self?.navigationController?.pushViewController(vcInstance, animated: true)
             }
             else if response?.errorMessage != nil
-            { self?.showAlert(title: Constants.ErrorAlertTitle, message: response?.errorMessage ?? "") }
+            { CustomAlert().showAlert(title: Constants.ErrorAlertTitle, message: response?.errorMessage ?? "", vcInstance: self) }
         }
     }
-    
-    private func showAlert(title: String, message: String) {
-        var alert = UIAlertController()
-        alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Constants.OkAlertTitle, style: .default, handler: nil))
-        self.present(alert, animated: true)
-    }
 }
+

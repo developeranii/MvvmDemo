@@ -12,7 +12,7 @@ struct LoginViewModel
 {
     func loginUser(loginRequest: LoginRequest, completion: @escaping(LoginResponse?) -> Void)
     {
-        let validationResult = LoginValidation().Validate(loginRequest: loginRequest)
+        let validationResult = LoginValidation().validate(loginRequest: loginRequest)
 
         if validationResult.success
         {

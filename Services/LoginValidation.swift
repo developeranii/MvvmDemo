@@ -9,7 +9,7 @@
 import Foundation
 
 struct LoginValidation {
-    func Validate(loginRequest: LoginRequest) -> ValidationResult
+    func validate(loginRequest: LoginRequest) -> ValidationResult
     {
         if(loginRequest.userEmail!.isEmpty)
         { return ValidationResult(success: false, error: "User email is empty") }
